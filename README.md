@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+Prayer Times Viewer 🌙🕌
 
-## Project info
+Overview
+Prayer Times Viewer is a modern, responsive web app that displays daily prayer times for users around the world. It includes authentication, personalized settings, AI-powered prayer tips, and supports multiple countries with significant Muslim populations.
 
-**URL**: https://lovable.dev/projects/f04b6848-1234-402c-8b27-31f2ca852549
+Features
 
-## How can I edit this code?
+User Authentication
 
-There are several ways of editing your application.
+Email/Password signup & login
 
-**Use Lovable**
+Google and Facebook login via Firebase Authentication
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f04b6848-1234-402c-8b27-31f2ca852549) and start prompting.
+Login/logout flow
 
-Changes made via Lovable will be committed automatically to this repo.
+Frontend
 
-**Use your preferred IDE**
+Responsive design for mobile and desktop
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clean, modern UI with rounded corners, shadows, and hover effects
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+City selection dropdown for prayer times
 
-Follow these steps:
+Supports popular Muslim countries: USA, Germany, Saudi Arabia, Dubai, Qatar, Egypt, Palestine, Ethiopia, and others
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Backend & Database
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Firestore database stores user info: email, name, selected city, and preferences
 
-# Step 3: Install the necessary dependencies.
-npm i
+Prayer times data stored per city
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Firebase Functions handle AI-powered prayer tips
 
-**Edit a file directly in GitHub**
+AI Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Get AI-generated tips based on your selected city and preferences
 
-**Use GitHub Codespaces**
+Powered by Google Gemini / Generative AI API
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployment
 
-## What technologies are used for this project?
+Ready for deployment on Vercel
 
-This project is built with:
+SPA routing ensures smooth navigation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Automatic updates from GitHub pushes
 
-## How can I deploy this project?
+Setup Instructions
 
-Simply open [Lovable](https://lovable.dev/projects/f04b6848-1234-402c-8b27-31f2ca852549) and click on Share -> Publish.
+Clone the repository:
 
-## Can I connect a custom domain to my Lovable project?
+git clone https://github.com/usamaawol/prayertime2025.git
 
-Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Install dependencies:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+cd prayertime2025
+npm install
+
+
+Configure Firebase:
+
+Add your firebaseConfig.js with your Firebase API key and settings.
+
+Run the project locally:
+
+npm start
+
+
+Deploy to Vercel (or any preferred hosting):
+
+Connect your GitHub repo to Vercel
+
+Automatic deployment on push to main branch
+
+Project Structure
+
+/PrayerTime
+├─ index.html        # Main HTML file
+├─ style.css         # Stylesheet
+├─ script.js         # JavaScript frontend logic
+├─ firebaseConfig.js # Firebase configuration
+├─ functions/        # Firebase Cloud Functions
+└─ README.md         # Project documentation
+
+
+Firebase Rules & Security
+
+Ensure Firestore rules are set up properly for read/write access
+
+Enable Google & Facebook sign-in in Firebase Authentication
+
+Add your domain(s) to the authorized domains list
+
+Contributing
+
+Pull requests are welcome!
+
+For major changes, please open an issue first.
+
+License
+
+MIT License
+
+Contact
+
+Developer: Usama Awol
+
+GitHub: https://github.com/usamaawol/prayer_time_2025
